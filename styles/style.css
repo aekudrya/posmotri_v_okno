@@ -16,6 +16,8 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  align-items: center;
 }
 
 h1,
@@ -40,52 +42,40 @@ ol {
 .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  margin: auto;
+  align-items: end;
   width: 1140px;
   gap: 30px;
-  align-items: end;
-}
-
-.search-form {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
 }
 
 .content__list {
   height: 298px;
   overflow: scroll;
+  position: relative;
+  top: 10px;
+  left: 10px;
+}
+
+.content__list:last-child {
+  padding-bottom: 0;
+  border: 1px solid salmon;
 }
 
 .content__list-item {
   padding-bottom: 30px;
 }
 
-.content__list-item:last-child { //deal with it
-  padding-bottom: 0;
-}
-
 .content__details {
   width: 100%;
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
 }
 
 .content__video-card {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-
-.result__video-container {
-  width: 711px;
-  height: 386px;
-  margin-bottom: 15px; // change logic 
-}
-
-.result__video {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
 }
 
 .content__video-card-thumbnail {
@@ -98,4 +88,169 @@ ol {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.title {
+  color: #FFF;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+  color: #545050;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.result {
+  margin-bottom: 6px;
+}
+
+.result__video {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  position: relative;
+  bottom: 16px;
+  left: 0px;
+}
+
+
+.content__card-link {
+  text-decoration: none;
+  color: #FFF;
+}
+
+.content__video-card-title {
+  color: #FFF;
+  font-family: Oswald, Arial, sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  line-height: 16.2px; /* 90% */
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.search-form__fieldset-title {
+  color: #FFF;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 5px;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-form__textfield {
+  all: unset;
+  color: rgba(255, 255, 255, 0.70);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  background-color: transparent;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  border-right: none;
+  width: fit-content;
+  min-inline-size: 225px;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.search-form__label-text {
+  appearance: none;
+  margin-right: 15px;
+}
+
+.search-form__pseudo-checkbox {
+  width: 19px;
+  height: 19px;
+  border: 1px solid #fff;
+}
+
+.search-form__pseudo-checkbox:active {
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid #FFF;
+  background-color: transparent;
+  color: #FFF;
+  cursor: pointer;
+}
+
+.search-form__submit-button {
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 194px;
+  height: 34px;
+  align-self: flex-end;
+}
+
+.more-button {
+  display: flex;
+  width: 100%;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+
 }
