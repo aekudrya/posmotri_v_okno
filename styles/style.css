@@ -53,6 +53,7 @@ ol {
   height: 298px;
   overflow: auto;
   inset-block-start: 0px;
+  padding: 3px;
 }
 
 .content__list-item {
