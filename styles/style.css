@@ -148,7 +148,6 @@ ol {
 }
 
 .content__video-card-title {
-  margin-bottom: 6px;
   padding-bottom: 6px;
   color: #FFF;
   font-family: Oswald, Arial, sans-serif;
@@ -255,7 +254,6 @@ ol {
 }
 
 .search-form__pseudo-checkbox {
-  position: relative;
   width: 19px;
   height: 19px;
   margin-right: 5px;
@@ -264,13 +262,11 @@ ol {
 
 .search-form__pseudo-checkbox:active::after {
   content: "";
-  position: absolute;
-  top: 1px;
-  left: 1px;
   display: block;
   width: 15px;
   height: 15px;
   background-color: #fff;
+  margin: 1px 1px;
 }
 
 .button {
@@ -298,7 +294,7 @@ ol {
   outline: none;
 }
 
-.button:has(:focus-visible) {
+.button:focus-visible {
   border: 1px solid #FFF;
   outline: 1px solid #FFF;
 }
